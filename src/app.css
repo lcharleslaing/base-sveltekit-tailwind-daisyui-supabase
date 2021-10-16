@@ -1,0 +1,24 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.auth-page{
+    @apply  flex bg-gray-100 h-screen items-center justify-center z-0
+}
+
+.auth-card {
+    @apply p-4 bg-white text-gray-700 rounded-2xl shadow-xl border
+}
+
+.auth-grid {
+    @apply grid grid-cols-4 gap-3
+}
+
+.auth-card-title {
+    @apply text-center col-span-4 text-3xl font-bold
+}
+
+.input-button {
+    @apply rounded col-span-4
+}
