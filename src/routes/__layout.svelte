@@ -20,12 +20,12 @@
   }
 </script>
 
-<div class="text-center m-12">
+<!-- <div class="text-center m-12">
   <a href="/" class="btn btn-primary">Index</a>
   <a href="/open" class="btn btn-primary">Open</a>
   <a href="/signin" class="btn btn-primary">Sign In</a>
   <a href="/signup" class="btn btn-primary">Sign Up</a>
   <a href="/open" class="btn btn-primary">Redirect</a>
   <button on:click={signOut} class="btn btn-primary">Logout</button>
-</div>
+</div> -->
 <slot />
