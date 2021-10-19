@@ -12,10 +12,10 @@
     @apply container mx-auto flex-1
 }
 .logo-brand{
-    @apply flex gap-2 items-center
+    @apply flex gap-2 items-center;
 }
 .brand{
-    @apply font-extrabold text-xl
+    @apply font-extrabold text-xl;
 }
 .navbar{
     @apply shadow-md h-12 flex items-center gap-2 rounded-lg mt-1 ml-1 mr-1;
@@ -24,7 +24,7 @@
 }
 
 .logo{
-    @apply w-8 h-8
+    @apply w-8 h-8;
 }
 
 .link{
