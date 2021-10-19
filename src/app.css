@@ -3,22 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
-.auth-page{
-    @apply  flex bg-gray-100 h-screen items-center justify-center z-0
+:root{
+    --theme-color: #424242;
+    --text-color: rgb(224, 224, 224);
+
+}
+.container{
+    @apply container mx-auto flex-1
+}
+.logo-brand{
+    @apply flex gap-2 items-center
+}
+.brand{
+    @apply font-extrabold text-xl
+}
+.navbar{
+    @apply shadow-md h-12 flex items-center gap-2 rounded-lg mt-1 ml-1 mr-1;
+    background-color: var(--theme-color);
+    color: var(--text-color)
 }
 
-.auth-card {
-    @apply p-4 bg-white text-gray-700 rounded-2xl shadow-xl border
+.logo{
+    @apply w-8 h-8
 }
 
-.auth-grid {
-    @apply grid grid-cols-4 gap-3
-}
-
-.auth-card-title {
-    @apply text-center col-span-4 text-3xl font-bold
-}
-
-.input-button {
-    @apply rounded col-span-4
+.link{
+    @apply flex-1 pl-6;
+    cursor: pointer;
 }

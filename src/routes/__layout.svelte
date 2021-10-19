@@ -4,6 +4,7 @@
   import { session } from "$app/stores";
   import { browser } from "$app/env";
   import { goto } from "$app/navigation";
+  import Navbar2 from "../components/Navbar2.svelte";
 
   if (browser) {
     $session = supabase.auth.session();
@@ -20,12 +21,10 @@
   }
 </script>
 
-<!-- <div class="text-center m-12">
-  <a href="/" class="btn btn-primary">Index</a>
-  <a href="/open" class="btn btn-primary">Open</a>
-  <a href="/signin" class="btn btn-primary">Sign In</a>
-  <a href="/signup" class="btn btn-primary">Sign Up</a>
-  <a href="/open" class="btn btn-primary">Redirect</a>
-  <button on:click={signOut} class="btn btn-primary">Logout</button>
-</div> -->
-<slot />
+<Navbar2 />
+<div class="bg-gray-200 h-screen">
+  <slot />
+</div>
+
+<style>
+</style>

@@ -1,5 +1,31 @@
 <script>
   import supabase from "$lib/db";
+  import { onMount } from "svelte";
+  import Localbase from "localbase";
+
+  let db = new Localbase("db");
+
+  onMount(() => {
+    let dostuffbtn = document.getElementById("dostuff");
+    dostuffbtn.addEventListener("click", dostuff);
+  });
+
+  const users = [];
+  function getUsers() {
+    db.collection("users")
+      .get()
+      .then((users) => {
+        console.log(users);
+      });
+  }
+
+  function dostuff() {
+    db.collection("users").add({
+      id: 1,
+      name: "Bill",
+      age: 47,
+    });
+  }
 
   async function signUp() {
     // Create a new user
@@ -11,7 +37,9 @@
   }
 </script>
 
-<div class="text-center mt-12">
-  <div class="text-4xl  text-green-400">INDEX PAGE</div>
-  <div class="text-4xl  text-green-400">You are Signed In!</div>
+<div class="container">
+  <h1 class="text-center">Home Page</h1>
 </div>
+
+<style>
+</style>
